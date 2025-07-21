@@ -70,12 +70,13 @@ border: var(--color-primary) 1.5px solid;
     height: 100%;
     border-radius: 0;
     padding: 1.2rem;
-    box-shadow: none;
+    
     animation: fadeInMenu 0.3s ease-in-out;
   }
   
   .theme-switcher__option {
     justify-content: center;
+    background-color: var(--color-background-card);
     font-size: 1.2rem;
   }
 }
