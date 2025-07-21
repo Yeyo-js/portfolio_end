@@ -1,0 +1,24 @@
+:root{
+    /* paleta base */
+    --color-primary: #00ffff;
+    --color-primary-alt: #00bfff;
+    --color-secondary: #22d3ee;
+    --color-background-card: rgba(34, 34, 34, 0.95);
+    --color-box-shadow: 0 8px 40px 0 rgba(0,255,255,0.10), 0 4px 18px 0 #151d27;
+    --color-text-sahadow: var(--color-primary-alt) 0 0 8px, var(--color-primary) 0 0 12px;
+    --color-dark: #0f0c29;
+    --color-dark-alt: #1a1a2e;
+    --color-light: #b5bac7;
+    --color-text: #f1f5f9;
+    --color-soft-purple: #8b5cf6;
+
+
+    /* tipografía */
+    
+
+    --font-title: 'Orbitron', 'Space Grotesk', 'Sora';
+    --font-body: 'Space Grotesk', Arial, sans-serif;
+
+    /* tamaños */
+    --max-width: 1200px;
+}

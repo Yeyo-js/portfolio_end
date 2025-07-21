@@ -1,0 +1,73 @@
+.about {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 1rem 6rem 1rem;
+  z-index: 2;
+}
+
+.about__container {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  border-radius: 1.7rem;
+  border: var(--color-primary) 1.5px solid;
+  box-shadow: var(--color-box-shadow);
+  backdrop-filter: blur(0.5px);
+  background-color: var(--color-background-card) opacity(0.95);
+  
+}
+
+.about__title {
+  font-size: 2.6rem;
+  color: var(--color-primary);
+  text-shadow: var(--color-text-sahadow);
+  font-family: var(--font-title);
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about__desc {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  opacity: 0.92;
+  line-height: 1.7;
+}
+
+.about__highlight {
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 1.11em;
+  letter-spacing: 1.2px;
+}
+
+/* Iconos flotantes animados */
+.about__icon-float {
+  position: absolute;
+  font-size: 3.5rem;
+  opacity: 0.16;
+  filter: blur(0.3px) drop-shadow(0 0 7px currentColor);
+  pointer-events: none;
+  animation: floatIcon 7s infinite ease-in-out alternate;
+  z-index: 1;
+}
+
+@keyframes floatIcon {
+  0% { transform: translateY(0) scale(1);}
+  40% { transform: translateY(-18px) scale(1.09);}
+  80% { transform: translateY(22px) scale(0.96);}
+  100% { transform: translateY(0) scale(1);}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .about__icon-float { font-size: 2.2rem; }
+  .about__container { padding: 1.8rem 1rem; }
+  .about__title { font-size: 2rem; }
+}

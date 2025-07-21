@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "resume": "Mi CV",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Desarrollador Front-End creativo, soñador y amante de la tecnología.",
+    "highlight": "Haz que tu idea cobre vida con código.",
+    "cv": "Descargar CV"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "desc": "Soy YeYoJS, apasionado por el desarrollo Front-End y las nuevas tecnologías. Siempre buscando nuevas formas de innovar, aprender y llevar las ideas a la realidad digital."
+  },
+  "resume": {
+  "title": "Currículum",
+  "education": "Educación",
+  "experience": "Experiencia",
+  "skills": "Habilidades Técnicas",
+  "educacion": [
+    {
+      "titulo": "Computación e Informática",
+      "institucion": "IESTP Celendín",
+      "fecha": "2022 - Actualidad",
+      "desc": "Formación superior técnica en programación, desarrollo web, bases de datos y tecnología informática."
+    },
+    {
+      "titulo": "Desarrollador Front-End",
+      "institucion": "Autodidacta",
+      "fecha": "2021 - Actualidad",
+      "desc": "Aprendizaje y práctica en HTML, CSS, JavaScript y React a través de proyectos personales y cursos online."
+    }
+  ],
+  "experiencia": [
+    {
+      "titulo": "Soporte Técnico",
+      "empresa": "Freelance",
+      "fecha": "2023 - 2024",
+      "desc": "Soluciones a problemas de hardware, software y redes a clientes locales y remotos."
+    },
+    {
+      "titulo": "Desarrollo Web",
+      "empresa": "Proyectos personales",
+      "fecha": "2022 - 2024",
+      "desc": "Diseño y desarrollo de sitios web interactivos con React, HTML5, CSS3 y JavaScript."
+    }
+  ],
+  "skills_list": [
+  { "skill": "HTML5", "level": "Avancé" },
+  { "skill": "CSS3", "level": "Avancé" },
+  { "skill": "JavaScript", "level": "Intermédiaire-Avancé" },
+  { "skill": "React", "level": "Intermédiaire" }
+]
+},
+  "projects": {
+    "title": "Mis Proyectos",
+    "see": "Ver Proyecto"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "name": "Nombre",
+    "lastname": "Apellidos",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado correctamente!",
+    "error": "Hubo un error enviando tu mensaje. Intenta más tarde.",
+    "name_required": "El nombre es obligatorio",
+    "name_short": "Nombre muy corto",
+    "lastname_required": "Los apellidos son obligatorios",
+    "lastname_short": "Apellidos muy cortos",
+    "email_required": "El correo es obligatorio",
+    "email_invalid": "Correo inválido"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,99 @@
+.language-switcher {
+  display: flex;
+  gap: 0.13rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-switcher__btn {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0.26rem 0.7rem;
+  margin: 0 0.04rem;
+  
+  font-size: 1.02rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.21em;
+  color: var(--color-primary);
+  opacity: 0.85;
+  transition:
+    background 0.14s,
+    color 0.13s,
+    box-shadow 0.15s,
+    opacity 0.17s;
+  box-shadow: none;
+  position: relative;
+}
+
+.language-switcher__icon {
+  font-size: 1.11em;
+  margin-right: 0.14em;
+  align-self: center;
+  display: flex;
+
+  transition: filter 0.13s;
+}
+
+.language-switcher__label {
+  display: none;
+  font-size: 0.97em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-left: 0.02em;
+  text-shadow: 0 1px 7px #0002;
+  color: var(--color-primary);
+  transition: color 0.15s;
+}
+
+.language-switcher__btn:hover,
+.language-switcher__btn:focus {
+  color: var(--color-primary-alt);
+  opacity: 1;
+  text-shadow: 0 0 9px var(--color-primary-alt), 0 0 1px #fff;
+}
+
+.language-switcher__btn.active {
+  background: none;
+  color: #fff;
+  opacity: 1;
+  z-index: 2;
+}
+.language-switcher__btn.active .language-switcher__label {
+  color: #fff;
+}
+
+/* Responsive: para pantallas menores de 600px */
+@media (max-width: 600px) {
+    .language-switcher {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .language-switcher__btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .language-switcher__label {
+        display: inline-block;
+        margin-top: 0.2em;
+    }
+    }
+
+@media (max-width: 400px) {
+  .language-switcher__btn {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .language-switcher__icon {
+    font-size: 1em;
+  }
+  
+  .language-switcher__label {
+    font-size: 0.85rem;
+  }
+}

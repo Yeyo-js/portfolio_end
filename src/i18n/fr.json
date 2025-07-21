@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "resume": "Mon CV",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Développeur Front-End créatif, rêveur et passionné de technologie.",
+    "highlight": "Donnez vie à votre idée grâce au code.",
+    "cv": "Télécharger CV"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "desc": "Je suis  YeYoJS, passionné par le développement Front-End et les nouvelles technologies. Toujours à la recherche de nouvelles façons d'innover, d'apprendre et de concrétiser des idées dans la réalité numérique."
+  },
+  "resume": {
+  "title": "Mon CV",
+  "education": "Éducation",
+  "experience": "Expérience",
+  "skills": "Compétences Techniques",
+  "educacion": [
+    {
+      "titulo": "Informatique et Technologies",
+      "institucion": "IESTP Celendín",
+      "fecha": "2022 - Présent",
+      "desc": "Formation supérieure technique en programmation, développement web, bases de données et technologie informatique."
+    },
+    {
+      "titulo": "Développeur Front-End",
+      "institucion": "Autodidacte",
+      "fecha": "2021 - Présent",
+      "desc": "Apprentissage et pratique de HTML, CSS, JavaScript et React à travers des projets personnels et des cours en ligne."
+    }
+  ],
+  "experiencia": [
+    {
+      "titulo": "Support Technique",
+      "empresa": "Freelance",
+      "fecha": "2023 - 2024",
+      "desc": "Solutions aux problèmes de matériel, de logiciels et de réseaux pour des clients locaux et distants."
+    },
+    {
+      "titulo": "Développement Web",
+      "empresa": "Projets personnels",
+      "fecha": "2022 - 2024",
+      "desc": "Conception et développement de sites web interactifs avec React, HTML5, CSS3 et JavaScript."
+    }
+  ],
+"skills_list": [
+  { "skill": "HTML5", "level": "Avancé" },
+  { "skill": "CSS3", "level": "Avancé" },
+  { "skill": "JavaScript", "level": "Intermédiaire-Avancé" },
+  { "skill": "React", "level": "Intermédiaire" }
+]
+},
+  "projects": {
+    "title": "Mes Projets",
+    "see": "Voir le projet"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "name": "Prénom",
+    "lastname": "Nom de famille",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "success": "Message envoyé avec succès !",
+    "error": "Une erreur est survenue lors de l'envoi de votre message. Réessayez plus tard.",
+    "name_required": "Le prénom est obligatoire",
+    "name_short": "Prénom trop court",
+    "lastname_required": "Le nom de famille est obligatoire",
+    "lastname_short": "Nom de famille trop court",
+    "email_required": "L'e-mail est obligatoire",
+    "email_invalid": "E-mail invalide"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}

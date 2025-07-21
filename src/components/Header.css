@@ -1,0 +1,211 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: var(--color-background-card);
+  backdrop-filter: blur(8px);
+  border-radius: 0 0 1.6rem 1.6rem;
+  box-shadow: var(--color-box-shadow);
+  border: 1.5px solid var(--color-primary);
+  border-top: none;
+}
+
+.header__container {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 4.2rem;
+  position: relative;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-family: 'Space Grotesk', 'Poppins', Arial, sans-serif;
+}
+
+.header__logo__icon {
+  display: flex;
+  align-items: center;
+  animation: rotate 3.5s linear infinite;
+  filter: drop-shadow(0 0 10px var(--color-primary));
+}
+
+@keyframes rotate {
+  0% { transform: rotate(-7deg);}
+  50% { transform: rotate(7deg);}
+  100% { transform: rotate(-7deg);}
+}
+
+.header__logo__text {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background:  var(--color-primary);
+  background-size: 200%;
+  background-position: left;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--color-text-sahadow);
+  transition: background-position 0.5s cubic-bezier(0.4,0,0.2,1), filter 0.5s;
+  white-space: nowrap;
+}
+
+.header__logo__text:hover {
+  background-position: right;
+  filter: drop-shadow(0 0 15px var(--color-primary));
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  min-width: 70px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.nav__item .nav__link {
+  color: var(--color-light);
+  font-size: 1.08rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  padding: 0.32rem 0.9rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.nav__item .nav__link:hover {
+  color: var(--color-primary);
+  background: var(--color-background-card);
+  box-shadow: 0 2px 15px 0 var(--color-primary-alt);
+}
+
+.nav__hamburger {
+  display: none;
+}
+
+/* ===== MOBILE (max-width: 900px) ===== */
+@media (max-width: 900px) {
+  .nav__hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 2.05rem;
+    padding: 0.4rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--color-primary-alt);
+    z-index: 201;
+    cursor: pointer;
+    position: absolute;
+    right: 1.3rem;
+    top: 1.2rem;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 76vw;
+    max-width: 260px;
+    height: 50vh;
+    background: var(--color-background-card);
+    box-shadow: var(--color-box-shadow);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    padding: 6.2rem 2.1rem 2.2rem 2.1rem;
+    border-radius: 1.2rem 0 0 1.2rem;
+    border: 1.5px solid var(--color-primary);
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 200;
+    transition: transform 0.35s cubic-bezier(.62,.19,.52,1.05), opacity 0.2s;
+  }
+  .nav.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 1.45rem;
+    width: 100%;
+  }
+  .nav__link {
+    font-size: 1.13rem;
+    padding: 1rem 0.6rem;
+    width: 100%;
+    text-align: left;
+    border-radius: 0.9rem;
+    background: none;
+  }
+
+  .header__container {
+    padding: 1rem 0.7rem 1rem 0.7rem;
+    min-height: 4rem;
+  }
+  .logo__text {
+    font-size: 1.27rem;
+  }
+  .header__actions {
+    gap: 0.7rem;
+    min-width: 55px;
+   margin-right: 30%;
+  }
+}
+
+/* ===== XS MOBILE (max-width: 440px) ===== */
+@media (max-width: 440px) {
+  .header__container {
+    padding: 0.6rem 0.3rem;
+    min-height: 3.3rem;
+  }
+  .logo__icon {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .logo__text {
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+  }
+  .nav__hamburger {
+    font-size: 1.41rem;
+    right: 0.5rem;
+    top: 0.6rem;
+    padding: 0.23rem;
+  }
+  .header__actions {
+    gap: 0.4rem;
+    min-width: 38px;
+  }
+}
+
+/* ===== MINI SCREENS (max-width: 345px) ===== */
+@media (max-width: 345px) {
+  .header__container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.3rem 0.12rem;
+    min-height: 2.4rem;
+  }
+  .logo__text {
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+  }
+}
