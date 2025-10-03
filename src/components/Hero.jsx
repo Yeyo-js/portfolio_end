@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-import perfil from "../assets/imagenes/perfil_final.png";
+import perfil from "../assets/imagenes/perfil_final.webp";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
