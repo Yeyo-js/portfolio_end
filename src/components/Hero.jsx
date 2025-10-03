@@ -23,9 +23,9 @@ const Hero = () => {
           </span>
         </p>
         <a
-          href="./assets/cv/cv_prueba.pdf"
+          href="https://drive.google.com/uc?export=download&id=1K_Zg7XCwByASXCSCNKKkh0vhPMAhwGB6"
           className="hero__cv"
-          download
+          download = "CV_YeYoJS.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from "react-i18next"
+
 import {
   FaGithub,
   FaLinkedin,
@@ -10,6 +12,8 @@ import {
 import "./Footer.css";
 
 function Footer() {
+  const { t } = useTranslation()
+
   return (
     <footer className="footer">
       <div className="footer__glow"></div>
@@ -66,8 +70,7 @@ function Footer() {
           </a>
         </div>
         <div className="footer__copyright">
-          © {new Date().getFullYear()} <span>YeYoJS</span>. Todos los derechos
-          reservados.
+          © {new Date().getFullYear()} <span>YeYoJS</span>. {t("footer.rights")}
         </div>
       </div>
     </footer>

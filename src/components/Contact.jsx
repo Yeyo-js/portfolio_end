@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
+import { useTranslation } from "react-i18next";
 
-// ------ Utilidades de validación
-const validateFields = (fields) => {
+// ------ Utilidades de validación (ahora recibe 't' como parámetro)
+const validateFields = (fields, t) => {
   const errors = {};
-  if (!fields.nombre.trim()) errors.nombre = "El nombre es obligatorio";
-  else if (fields.nombre.length < 2) errors.nombre = "Nombre muy corto";
+  
+  if (!fields.nombre.trim()) errors.nombre = t("contact.name_required");
+  else if (fields.nombre.length < 2) errors.nombre = t("contact.name_short");
 
-  if (!fields.apellidos.trim()) errors.apellidos = "Los apellidos son obligatorios";
-  else if (fields.apellidos.length < 2) errors.apellidos = "Apellidos muy cortos";
+  if (!fields.apellidos.trim()) errors.apellidos = t("contact.lastname_required");
+  else if (fields.apellidos.length < 2) errors.apellidos = t("contact.lastname_short");
 
-  if (!fields.email.trim()) errors.email = "El correo es obligatorio";
+  if (!fields.email.trim()) errors.email = t("contact.email_required");
   else if (!/^[\w.-]+@[\w.-]+\.\w{2,}$/.test(fields.email))
-    errors.email = "Correo inválido";
-
-
+    errors.email = t("contact.email_invalid");
 
   return errors;
 };
@@ -23,10 +23,11 @@ const validateFields = (fields) => {
 const initialState = { nombre: "", apellidos: "", email: "", mensaje: "" };
 
 function Contact() {
+  const { t } = useTranslation(); // Hook de traducción
   const [fields, setFields] = useState(initialState);
   const [errors, setErrors] = useState({});
   const [isSending, setIsSending] = useState(false);
-  const [status, setStatus] = useState(null); // null | "ok" | "fail"
+  const [status, setStatus] = useState(null);
 
   // ---- HANDLERS
   const handleChange = (e) => {
@@ -36,13 +37,15 @@ function Contact() {
   };
 
   const handleBlur = (e) => {
-    const fieldErrors = validateFields({ ...fields, [e.target.name]: e.target.value });
+    // Pasa 't' a la función de validación
+    const fieldErrors = validateFields({ ...fields, [e.target.name]: e.target.value }, t);
     setErrors((prev) => ({ ...prev, [e.target.name]: fieldErrors[e.target.name] }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const fieldErrors = validateFields(fields);
+    // Pasa 't' a la función de validación
+    const fieldErrors = validateFields(fields, t);
     setErrors(fieldErrors);
 
     if (Object.keys(fieldErrors).length > 0) return;
@@ -72,12 +75,12 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="contact" aria-labelledby="contact-title"  data-aos="fade-up">
-      <h2 id="contact-title" className="contact__title">Contáctame</h2>
+    <section id="contact" className="contact" aria-labelledby="contact-title" data-aos="fade-up">
+      <h2 id="contact-title" className="contact__title">{t("contact.title")}</h2>
       <form className="contact__form" autoComplete="off" onSubmit={handleSubmit} noValidate>
         <div className="contact__row">
           <FormField
-            label="Nombre"
+            label={t("contact.name")}
             name="nombre"
             value={fields.nombre}
             onChange={handleChange}
@@ -87,7 +90,7 @@ function Contact() {
             autoComplete="given-name"
           />
           <FormField
-            label="Apellidos"
+            label={t("contact.lastname")}
             name="apellidos"
             value={fields.apellidos}
             onChange={handleChange}
@@ -98,7 +101,7 @@ function Contact() {
           />
         </div>
         <FormField
-          label="Correo electrónico"
+          label={t("contact.email")}
           type="email"
           name="email"
           value={fields.email}
@@ -109,7 +112,7 @@ function Contact() {
           autoComplete="email"
         />
         <FormField
-          label="Mensaje"
+          label={t("contact.message")}
           type="textarea"
           name="mensaje"
           value={fields.mensaje}
@@ -118,10 +121,10 @@ function Contact() {
           error={errors.mensaje}
           disabled={isSending}
         />
-        {status === "ok" && <div className="contact__success">¡Mensaje enviado correctamente!</div>}
+        {status === "ok" && <div className="contact__success">{t("contact.success")}</div>}
         {status === "fail" && (
           <div className="form-error contact__error__global">
-            Hubo un error enviando tu mensaje. Intenta más tarde.
+            {t("contact.error")}
           </div>
         )}
         <button
@@ -130,7 +133,7 @@ function Contact() {
           disabled={isSending}
           aria-busy={isSending}
         >
-          {isSending ? "Enviando..." : "Enviar"}
+          {isSending ? t("contact.sending") : t("contact.send")}
         </button>
       </form>
     </section>
@@ -183,6 +186,5 @@ function FormField({
     </div>
   );
 }
-
 
 export default Contact;

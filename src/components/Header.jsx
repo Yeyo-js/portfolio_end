@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import ThemeSwitcher from './ThemeSwitcher'
-//import LanguageSwitcher  from "./LanguageSwitcher"
+import LanguageSwitcher  from "./LanguageSwitcher"
 import { useTranslation } from "react-i18next";
 
 
@@ -47,7 +47,7 @@ const Header = () => {
           <ul className="nav__list">
             <li className="nav__item">
               <a className="nav__link" href="#hero" onClick={() => setMobileOpen(false)}>
-               {t("nav.home")}
+                {t("nav.home")}
               </a>
             </li>
             <li className="nav__item">
@@ -67,14 +67,14 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a className="nav__link" href="#contact" onClick={() => setMobileOpen(false)}>
-               {t("nav.contact")}
+                {t("nav.contact")}
               </a>
             </li>
           </ul>
         </nav>
         <div className="header__actions">
           {<ThemeSwitcher />}
-          {/*<LanguageSwitcher />*/}
+          <LanguageSwitcher />
         </div>
       </div>
     </header>

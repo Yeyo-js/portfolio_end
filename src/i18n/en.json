@@ -57,7 +57,33 @@
 },
   "projects": {
     "title": "My Projects",
-    "see": "View Project"
+    "see": "View Project",
+    "list": [
+      {
+        "title": "IPC Institute Website",
+        "description": "Institutional website developed with HTML, CSS and JavaScript. Focused on usability and academic presentation.",
+        "image": "https://media.licdn.com/dms/image/v2/C4E1BAQHJrgyoG4Bndw/company-background_10000/company-background_10000/0/1645579874373/instituto_iberoamericano_de_formacin_profesional_cover?e=2147483647&v=beta&t=uWkHR4GeJW8bDx_gDLerFFFhQopVKWrflN9AVyW-NWE",
+        "url": "https://github.com/Yeyo-js/P-gina-web-IPC"
+      },
+      {
+        "title": "Personal Portfolio",
+        "description": "My current portfolio, built with React and Vite. Includes multilingual support, dynamic themes, and modern design.",
+        "image": "https://media.slidesgo.com/storage/2304276/conversions/0-game-developer-portfolio-thumb.jpg",
+        "url": "https://github.com/Yeyo-js/Portafolio_Yeyo"
+      },
+      {
+        "title": "Verses of a Poet",
+        "description": "Web application for love poems, developed with HTML and CSS. Includes many verses and an attractive design.",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-1280008568-66bb3104ba635.jpg?resize=980:*",
+        "url": "https://poemasyerson.neocities.org/"
+      },
+      {
+        "title": "Interandino",
+        "description": "Institutional website developed with React. Focused on usability and academic presentation.",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjXCwIqcxftmFWtbUSD-PQFokD0eCipihh-g&s",
+        "url": "https://poemasyerson.neocities.org/"
+      }
+    ]
   },
   "contact": {
     "title": "Contact Me",
